@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Annuaire du Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="header-logo">
+        <img src="https://www.ville-tcv.fr/wp-content/uploads/TCV-logo-quadri-300x221.png" alt="Logo Téteghem-Coudekerque-Village">
+      </div>
+      <h1>🌐 Annuaire du Web</h1>
+      <p class="subtitle">Simplifiez votre quotidien numérique à Téteghem-Coudekerque-Village ! 
+        Un espace pensé et conçu par vos conseillers numériques Andy & Émilie</p>
+    </header>
+
+    <!-- ALERTE SÉCURITÉ -->
+    <div class="content">
+      <div class="security-alert">
+        <div class="security-title">
+          ⚠️ Attention aux arnaques sur Internet !
+        </div>
+        <div class="security-content">
+          <strong>Vos conseillers vous recommandent de rester vigilants :</strong>
+          <ul class="security-list">
+            <li>🔒 Vérifiez que l'adresse du site commence par <strong>https://</strong></li>
+            <li>🏛️ Les sites officiels se terminent souvent par <strong>.gouv.fr</strong> ou <strong>.fr</strong></li>
+            <li>📞 <strong>Ne communiquez JAMAIS</strong> vos mots de passe par téléphone ou email</li>
+            <li>💳 Méfiez-vous des offres trop alléchantes (gains faciles, cadeaux gratuits)</li>
+            <li>❓ En cas de doute, contactez-nous ou appelez le <strong>3939</strong> (Service Public)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- BARRE DE RECHERCHE PRINCIPALE -->
+      <div class="search-bar">
+        <input type="text" class="search-input" id="searchInput" placeholder="🔍 Rechercher un site ou un service...">
+      </div>
+
+      <!-- TABS -->
+      <div class="tabs" id="tabs">
+        <div class="tab active" data-category="tous">📋 Tous</div>
+        <div class="tab" data-category="administration">🏛️ Administration</div>
+        <div class="tab" data-category="loisirs">🎮 Loisirs</div>
+        <div class="tab" data-category="creation">🎨 Création</div>
+        <div class="tab" data-category="actualites">📰 Actualités</div>
+        <div class="tab" data-category="shopping">🛒 Shopping</div>
+        <div class="tab" data-category="outils">🔧 Outils</div>
+      </div>
+
+      <!-- CONTENU DES CARTES -->
+      <div class="content" id="content"></div>
+    </div>
+  </div>
+
+  <!-- ========================= -->
+  <!-- SECTION CLASSIFICATION OPTIMISÉE -->
+  <!-- ========================= -->
+  <section id="classification" class="classification-section-v2">
+    <div class="classification-header">
+      <h2>📚 Nos fiches informatiques</h2>
+      <p class="intro">
+        Des fiches pratiques conçues par Andy & Émilie pour vous accompagner dans vos découvertes numériques
+      </p>
+    </div>
+
+    <!-- Barre de recherche moderne -->
+    <div class="search-wrapper">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchFichesV2" placeholder="Rechercher un atelier par nom, thème ou mot-clé..." />
+        <button id="clearSearchV2" class="clear-btn" style="display: none;">✕</button>
+      </div>
+    </div>
+
+    <!-- Statistiques rapides -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <span class="stat-number" id="totalFiches">0</span>
+        <span class="stat-label">Fiches disponibles</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" id="visibleFiches">0</span>
+        <span class="stat-label">Résultats affichés</span>
+      </div>
+    </div>
+
+    <!-- Filtres multi-critères -->
+    <div class="filters-container">
+      
+      <!-- Filtre par catégorie -->
+      <div class="filter-group">
+        <label class="filter-label">🏷️ Catégorie</label>
+        <div class="filter-buttons">
+          <button class="filter-tag active" data-filter="category" data-value="all">Toutes</button>
+          <button class="filter-tag" data-filter="category" data-value="bureautique">💼 Bureautique</button>
+          <button class="filter-tag" data-filter="category" data-value="securite">🔒 Sécurité</button>
+          <button class="filter-tag" data-filter="category" data-value="demandes">📝 Démarches</button>
+          <button class="filter-tag" data-filter="category" data-value="navigation">🌐 Navigation</button>
+          <button class="filter-tag" data-filter="category" data-value="outils">🛠️ Outils</button>
+        </div>
+      </div>
+
+      <!-- Filtre par niveau -->
+      <div class="filter-group">
+        <label class="filter-label">📊 Niveau</label>
+        <div class="filter-buttons">
+          <button class="filter-tag active" data-filter="niveau" data-value="all">Tous niveaux</button>
+          <button class="filter-tag" data-filter="niveau" data-value="debutant">🌱 Débutant</button>
+          <button class="filter-tag" data-filter="niveau" data-value="intermediaire">🌿 Intermédiaire</button>
+          <button class="filter-tag" data-filter="niveau" data-value="avance">🌳 Avancé</button>
+        </div>
+      </div>
+
+      <!-- Filtre par animateur -->
+      <div class="filter-group">
+        <label class="filter-label">👤 Animateur</label>
+        <div class="filter-buttons">
+          <button class="filter-tag active" data-filter="animateur" data-value="all">Tous</button>
+          <button class="filter-tag" data-filter="animateur" data-value="andy">Andy</button>
+          <button class="filter-tag" data-filter="animateur" data-value="emilie">Émilie</button>
+        </div>
+      </div>
+
+       <div class="filters-footer">
+      <button id="resetFilters" class="reset-btn">🔄 Réinitialiser les filtres</button>
+
+      <!-- Filtrage par option -->
+      <div class="sort-bar">
+         <label for="sortSelect">Trier par :</label>
+         <select id="sortSelect" class="sort-select">
+            <option value="default">Par défaut</option>
+            <option value="title">Titre (A-Z)</option>
+            <option value="niveau">Niveau (facile → difficile)</option>
+            <option value="duree">Durée (courte → longue)</option>
+         </select>
+      </div>
+   </div>
+
+</div>
+
+    <!-- Conteneur des fiches (GÉNÉRÉ PAR JAVASCRIPT) -->
+    <div id="ficheContainerV2" class="fiche-grid">
+      <!-- Les fiches sont générées automatiquement par le JavaScript ! -->
+    </div>
+
+    <!-- Message si aucun résultat -->
+    <div id="noResultsV2" class="no-results-v2" style="display: none;">
+      <div class="no-results-icon-v2">🔍</div>
+      <h3>Aucun atelier trouvé</h3>
+      <p>Essayez de modifier vos critères de recherche ou de filtrage</p>
+      <button id="resetFromNoResults" class="reset-btn">🔄 Réinitialiser</button>
+    </div>
+  </section>
+
+  <!-- SCRIPT JS -->
+  <script src="script.js"></script>
+</body>
+</html>
