@@ -19,7 +19,7 @@
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
-  /* 🔴 CORRECTIF STABLE : Équivalent à 17.5px natif fixe, ultra-lisible à 100% sans effet de loupe */
+  /* Styles globaux */
   font-size: 110%;
   line-height: 1.5;
   letter-spacing: 0.15px;
@@ -103,4 +103,13 @@ code {
   font-size: 0.85em;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
 }
