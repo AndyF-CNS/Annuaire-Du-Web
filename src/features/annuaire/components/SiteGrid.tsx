@@ -48,15 +48,15 @@ export default function SiteGrid({ sites }: Props) {
     )
   }
 
-  return (
-    <motion.div
+  return (<motion.div
       variants={containerVariants}
       initial="hidden"
       animate="show"
-      className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[clamp(1.25rem,2.5vw,2rem)]"
+      // Utilisation de 'items-stretch' pour forcer l'alignement des hauteurs
+      className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 items-stretch"
     >
       {sites.map((site) => (
-        <motion.div key={site.name} variants={itemVariants} className="h-full">
+        <motion.div key={site.name} variants={itemVariants} className="h-full flex">
           <SiteCard site={site} />
         </motion.div>
       ))}

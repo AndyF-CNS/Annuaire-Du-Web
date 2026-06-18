@@ -38,7 +38,11 @@ export default function Home() {
       
       {/* 1. Grand bandeau d'accueil premium (Votre composant existant) */}
       <Hero />
-
+    <div className="text-base text-slate-900 font-bold tracking-tight">
+      <h2>
+        <span>🔭</span> Voici l'ensemble de ce que le portail contient
+        </h2>
+    </div>
       {/* 2. Vue d'ensemble des chiffres clés (Votre composant existant) */}
       <StatsGrid />
       

@@ -1,4 +1,4 @@
-import { Globe, BookOpen, Sparkles, Star } from "lucide-react"
+import { Globe, BookOpen, Sparkles, Star, Newspaper } from "lucide-react"
 
 export default function StatsGrid() {
   const stats = [
@@ -22,10 +22,15 @@ export default function StatsGrid() {
       value: 15,
       icon: Star,
     },
+    {
+      title:"Blog",
+      value: 1,
+      icon: Newspaper,
+    }
   ]
 
   return (
-    <div className="grid md:grid-cols-4 gap-4">
+    <div className="grid md:grid-cols-5 gap-4">
       {stats.map((stat) => {
         const Icon = stat.icon
 

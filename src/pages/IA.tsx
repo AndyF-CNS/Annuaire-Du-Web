@@ -218,7 +218,7 @@ export default function IA() {
       title: "GitHub Copilot",
       category: "Code",
       purpose: "Idéal pour : Complétion de code",
-      description: "Un assistant IA intégré à votre éditeur de code pour écrire du code plus rapidement et avec moins d'erreurs.",
+      description: "Un assistant IA intégré à votre éditeur de code pour écrire du code plus rapidement et avec moins d'erreres.",
       website: "https://github.com/features/copilot",
       logo: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
       badge: "Intégration IDE",
@@ -263,7 +263,7 @@ export default function IA() {
       title: "Notion AI",
       category: "Autre",
       purpose: "Idéal pour : Gestion de projets et notes",
-      description: "Un assistant IA intégré à Notion pour vous aider à rédiger, organiser et gérer vos projets.",
+      description: "Un assistant IA intégré à Notion pour vous help à rédiger, organiser et gérer vos projets.",
       website: "https://notion.ai",
       logo: "https://notion.so/favicon.ico",
       badge: "Tout-en-un",
@@ -331,12 +331,12 @@ export default function IA() {
             Les Intelligences Artificielles
           </h1>
           <p className="text-slate-500 text-sm mt-0.5 max-w-2xl leading-relaxed">
-            Découvrez notre sélection d'outils intelligents classés par spécialités pour enrichir votre quotidien.
+            Découvrez notre selection d'outils intelligents classés par spécialités pour enrichir votre quotidien.
           </p>
         </div>
       </header>
 
-      {/* ================= ZONE CENTRALE MAGNIFIÉE : CARTOGRAPHIE DES SAVOIRS ================= */}
+      {/* ================= ZONE CENTRALE : CARTOGRAPHIE DES SAVOIRS ================= */}
       <section className="bg-slate-950 rounded-3xl p-6 md:p-12 shadow-xl border border-slate-800 relative overflow-hidden text-center">
         {/* Voile de grille technique en arrière-plan */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20"></div>
@@ -351,121 +351,119 @@ export default function IA() {
           </p>
         </div>
 
-        {/* Hub Technologique Adapté à l'Image Globale */}
-        <div className="relative max-w-4xl mx-auto flex flex-col md:grid md:grid-cols-12 items-center gap-8 min-h-[360px] py-4">
+        {/* Hub Technologique */}
+        <div className="relative max-w-4xl mx-auto flex flex-col md:grid md:grid-cols-12 items-center gap-8 md:h-[420px] py-4">
           
-          {/* ⚡ CALQUE SVG DE LIGNES COUDÉES INTERACTIVES (Masqué sur Mobile pour la lisibilité) */}
+          {/* ⚡ CALQUE SVG INTERACTIF ET ALIGNÉ */}
           <svg 
             className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-0" 
-            viewBox="0 0 900 400" 
+            viewBox="0 0 900 420" 
             preserveAspectRatio="none"
           >
             <defs>
-              {/* Gradients lumineux pour les lignes */}
               <linearGradient id="grad-texte" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="#3b82f6" />
                 <stop offset="100%" stopColor="#8b5cf6" />
               </linearGradient>
               <linearGradient id="grad-image" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#10b981" />
-                <stop offset="100%" stopColor="#3b82f6" />
+                <stop offset="0%" stopColor="#a855f7" />
+                <stop offset="100%" stopColor="#c084fc" />
               </linearGradient>
               <linearGradient id="grad-code" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="#06b6d4" />
                 <stop offset="100%" stopColor="#6366f1" />
               </linearGradient>
               <linearGradient id="grad-video" x1="100%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#ec4899" />
-                <stop offset="100%" stopColor="#8b5cf6" />
+                <stop offset="0%" stopColor="#ffb900" />
+                <stop offset="100%" stopColor="#f59e0b" />
               </linearGradient>
               <linearGradient id="grad-audio" x1="100%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#f97316" />
+                <stop offset="0%" stopColor="#f43f5e" />
                 <stop offset="100%" stopColor="#ec4899" />
               </linearGradient>
               <linearGradient id="grad-autre" x1="100%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#f59e0b" />
-                <stop offset="100%" stopColor="#f97316" />
+                <stop offset="0%" stopColor="#ef4444" />
+                <stop offset="100%" stopColor="#b91c1c" />
               </linearGradient>
             </defs>
 
-            {/* --- CÔTÉ GAUCHE (Hémisphère Froid) --- */}
+            {/* --- CÔTÉ GAUCHE --- */}
             {/* Ligne 1 : Texte */}
             <path 
-              d="M 220 75 H 275 L 335 155 H 370" 
+              d="M 225 70 H 280 L 340 165 H 375" 
               fill="none" 
               stroke="url(#grad-texte)" 
               strokeWidth={activeCategory === "Texte" ? "3" : "1.5"} 
-              strokeOpacity={activeCategory === "Texte" || activeCategory === "Tous" ? "1" : "0.2"}
+              strokeOpacity={activeCategory === "Texte" || activeCategory === "Tous" ? "1" : "0.4"}
               className="transition-all duration-300"
             />
-            <circle cx="220" cy="75" r="3.5" fill="#3b82f6" opacity={activeCategory === "Texte" || activeCategory === "Tous" ? "1" : "0.3"}/>
-            <circle cx="370" cy="155" r="2.5" fill="#8b5cf6" opacity={activeCategory === "Texte" || activeCategory === "Tous" ? "1" : "0.3"}/>
+            <circle cx="225" cy="70" r="3.5" fill="#3b82f6" opacity={activeCategory === "Texte" || activeCategory === "Tous" ? "1" : "0.4"}/>
+            <circle cx="375" cy="165" r="2.5" fill="#8b5cf6" opacity={activeCategory === "Texte" || activeCategory === "Tous" ? "1" : "0.4"}/>
 
-            {/* Ligne 2 : Image */}
+            {/* Ligne 2 : Image (Milieu Gauche Stylisée) */}
             <path 
-              d="M 220 200 H 375" 
+              d="M 225 210 H 270 L 320 195 H 365" 
               fill="none" 
               stroke="url(#grad-image)" 
               strokeWidth={activeCategory === "Image" ? "3" : "1.5"} 
-              strokeOpacity={activeCategory === "Image" || activeCategory === "Tous" ? "1" : "0.2"}
+              strokeOpacity={activeCategory === "Image" || activeCategory === "Tous" ? "1" : "0.4"}
               className="transition-all duration-300"
             />
-            <circle cx="220" cy="200" r="3.5" fill="#10b981" opacity={activeCategory === "Image" || activeCategory === "Tous" ? "1" : "0.3"}/>
-            <circle cx="375" cy="200" r="2.5" fill="#3b82f6" opacity={activeCategory === "Image" || activeCategory === "Tous" ? "1" : "0.3"}/>
+            <circle cx="225" cy="210" r="3.5" fill="#a855f7" opacity={activeCategory === "Image" || activeCategory === "Tous" ? "1" : "0.4"}/>
+            <circle cx="365" cy="195" r="2.5" fill="#c084fc" opacity={activeCategory === "Image" || activeCategory === "Tous" ? "1" : "0.4"}/>
 
             {/* Ligne 3 : Code */}
             <path 
-              d="M 220 325 H 275 L 335 245 H 370" 
+              d="M 225 350 H 280 L 340 255 H 375" 
               fill="none" 
               stroke="url(#grad-code)" 
               strokeWidth={activeCategory === "Code" ? "3" : "1.5"} 
-              strokeOpacity={activeCategory === "Code" || activeCategory === "Tous" ? "1" : "0.2"}
+              strokeOpacity={activeCategory === "Code" || activeCategory === "Tous" ? "1" : "0.4"}
               className="transition-all duration-300"
             />
-            <circle cx="220" cy="325" r="3.5" fill="#06b6d4" opacity={activeCategory === "Code" || activeCategory === "Tous" ? "1" : "0.3"}/>
-            <circle cx="370" cy="245" r="2.5" fill="#6366f1" opacity={activeCategory === "Code" || activeCategory === "Tous" ? "1" : "0.3"}/>
+            <circle cx="225" cy="350" r="3.5" fill="#06b6d4" opacity={activeCategory === "Code" || activeCategory === "Tous" ? "1" : "0.4"}/>
+            <circle cx="375" cy="255" r="2.5" fill="#6366f1" opacity={activeCategory === "Code" || activeCategory === "Tous" ? "1" : "0.4"}/>
 
-
-            {/* --- CÔTÉ DROIT (Hémisphère Chaud) --- */}
+            {/* --- CÔTÉ DROIT --- */}
             {/* Ligne 1 : Vidéo */}
             <path 
-              d="M 680 75 H 625 L 565 155 H 530" 
+              d="M 675 70 H 620 L 560 165 H 525" 
               fill="none" 
               stroke="url(#grad-video)" 
               strokeWidth={activeCategory === "Vidéo" ? "3" : "1.5"} 
-              strokeOpacity={activeCategory === "Vidéo" || activeCategory === "Tous" ? "1" : "0.2"}
+              strokeOpacity={activeCategory === "Vidéo" || activeCategory === "Tous" ? "1" : "0.4"}
               className="transition-all duration-300"
             />
-            <circle cx="680" cy="75" r="3.5" fill="#ec4899" opacity={activeCategory === "Vidéo" || activeCategory === "Tous" ? "1" : "0.3"}/>
-            <circle cx="530" cy="155" r="2.5" fill="#8b5cf6" opacity={activeCategory === "Vidéo" || activeCategory === "Tous" ? "1" : "0.3"}/>
+            <circle cx="675" cy="70" r="3.5" fill="#ffb900" opacity={activeCategory === "Vidéo" || activeCategory === "Tous" ? "1" : "0.4"}/>
+            <circle cx="525" cy="165" r="2.5" fill="#f59e0b" opacity={activeCategory === "Vidéo" || activeCategory === "Tous" ? "1" : "0.4"}/>
 
-            {/* Ligne 2 : Audio */}
+            {/* Ligne 2 : Audio (Milieu Droit Stylisée) */}
             <path 
-              d="M 680 200 H 525" 
+              d="M 675 210 H 630 L 580 195 H 535" 
               fill="none" 
               stroke="url(#grad-audio)" 
               strokeWidth={activeCategory === "Audio" ? "3" : "1.5"} 
-              strokeOpacity={activeCategory === "Audio" || activeCategory === "Tous" ? "1" : "0.2"}
+              strokeOpacity={activeCategory === "Audio" || activeCategory === "Tous" ? "1" : "0.4"}
               className="transition-all duration-300"
             />
-            <circle cx="680" cy="200" r="3.5" fill="#f97316" opacity={activeCategory === "Audio" || activeCategory === "Tous" ? "1" : "0.3"}/>
-            <circle cx="525" cy="200" r="2.5" fill="#ec4899" opacity={activeCategory === "Audio" || activeCategory === "Tous" ? "1" : "0.3"}/>
+            <circle cx="675" cy="210" r="3.5" fill="#f43f5e" opacity={activeCategory === "Audio" || activeCategory === "Tous" ? "1" : "0.4"}/>
+            <circle cx="535" cy="195" r="2.5" fill="#ec4899" opacity={activeCategory === "Audio" || activeCategory === "Tous" ? "1" : "0.4"}/>
 
             {/* Ligne 3 : Autre */}
             <path 
-              d="M 680 325 H 625 L 565 245 H 530" 
+              d="M 675 350 H 620 L 560 255 H 525" 
               fill="none" 
               stroke="url(#grad-autre)" 
               strokeWidth={activeCategory === "Autre" ? "3" : "1.5"} 
-              strokeOpacity={activeCategory === "Autre" || activeCategory === "Tous" ? "1" : "0.2"}
+              strokeOpacity={activeCategory === "Autre" || activeCategory === "Tous" ? "1" : "0.4"}
               className="transition-all duration-300"
             />
-            <circle cx="680" cy="325" r="3.5" fill="#f59e0b" opacity={activeCategory === "Autre" || activeCategory === "Tous" ? "1" : "0.3"}/>
-            <circle cx="530" cy="245" r="2.5" fill="#f97316" opacity={activeCategory === "Autre" || activeCategory === "Tous" ? "1" : "0.3"}/>
+            <circle cx="675" cy="350" r="3.5" fill="#ef4444" opacity={activeCategory === "Autre" || activeCategory === "Tous" ? "1" : "0.4"}/>
+            <circle cx="525" cy="255" r="2.5" fill="#b91c1c" opacity={activeCategory === "Autre" || activeCategory === "Tous" ? "1" : "0.4"}/>
           </svg>
 
-          {/* HÉMISPHÈRE GAUCHE (Bleu/Vert) : Choix Texte, Image, Code */}
-          <div className="md:col-span-3 w-full flex flex-row md:flex-col justify-center gap-3 z-10">
+          {/* HÉMISPHÈRE GAUCHE */}
+          <div className="md:col-span-3 w-full h-full flex flex-row md:grid md:grid-rows-3 items-center gap-4 z-10">
             <button 
               onClick={() => handleBrainHubClick("Texte")}
               className={`flex-1 md:w-full flex items-center gap-3 p-3 rounded-xl border text-left transition-all duration-200 ${activeCategory === "Texte" ? "bg-blue-950/80 border-blue-500 text-white shadow-lg shadow-blue-500/20 scale-102" : "bg-slate-900/90 border-slate-800 text-slate-300 hover:border-slate-700 hover:bg-slate-800"}`}
@@ -475,59 +473,58 @@ export default function IA() {
             </button>
             <button 
               onClick={() => handleBrainHubClick("Image")}
-              className={`flex-1 md:w-full flex items-center gap-3 p-3 rounded-xl border text-left transition-all duration-200 ${activeCategory === "Image" ? "bg-emerald-950/80 border-emerald-500 text-white shadow-lg shadow-emerald-500/20 scale-102" : "bg-slate-900/90 border-slate-800 text-slate-300 hover:border-slate-700 hover:bg-slate-800"}`}
+              className={`flex-1 md:w-full flex items-center gap-3 p-3 rounded-xl border text-left transition-all duration-200 ${activeCategory === "Image" ? "bg-purple-950/80 border-purple-500 text-white shadow-lg shadow-purple-500/20 scale-102" : "bg-slate-900/90 border-slate-800 text-slate-300 hover:border-slate-700 hover:bg-slate-800"}`}
             >
-              <div className="w-8 h-8 rounded-lg bg-slate-950 flex items-center justify-center text-emerald-400"><ImageIcon size={16} /></div>
+              <div className="w-8 h-8 rounded-lg bg-slate-950 flex items-center justify-center text-purple-400"><ImageIcon size={16} /></div>
               <span className="text-xs font-bold tracking-tight">Création Image</span>
             </button>
             <button 
               onClick={() => handleBrainHubClick("Code")}
-              className={`flex-1 md:w-full flex items-center gap-3 p-3 rounded-xl border text-left transition-all duration-200 ${activeCategory === "Code" ? "bg-cyan-950/80 border-cyan-500 text-white shadow-lg shadow-cyan-500/20 scale-102" : "bg-slate-900/90 border-slate-800 text-slate-300 hover:border-slate-700 hover:bg-slate-800"}`}
+              className={`flex-1 md:w-full flex items-center gap-3 p-3 rounded-xl border text-left transition-all duration-200 ${activeCategory === "Code" ? "bg-cyan-950/80 border-cyan-300 text-white shadow-lg shadow-cyan-500/20 scale-102" : "bg-slate-900/90 border-slate-800 text-slate-300 hover:border-slate-700 hover:bg-slate-800"}`}
             >
               <div className="w-8 h-8 rounded-lg bg-slate-950 flex items-center justify-center text-cyan-400"><Code2 size={16} /></div>
               <span className="text-xs font-bold tracking-tight">Programmation</span>
             </button>
           </div>
 
-          {/* CENTRE : L'IMAGE PNG EN PLEINE MAJESTÉ */}
-          <div className="md:col-span-6 w-full flex items-center justify-center relative px-2 z-10">
-            {/* Halo lumineux d'ambiance dynamique selon la catégorie active */}
+          {/* CENTRE */}
+          <div className="md:col-span-6 w-full h-full flex items-center justify-center relative px-2 z-10">
             <div className={`absolute w-64 h-64 rounded-full blur-3xl pointer-events-none transition-all duration-500 ${
-              activeCategory === "Texte" ? "bg-blue-600/25" :
-              activeCategory === "Image" ? "bg-emerald-600/25" :
-              activeCategory === "Code" ? "bg-cyan-600/25" :
-              activeCategory === "Vidéo" ? "bg-pink-600/25" :
-              activeCategory === "Audio" ? "bg-orange-600/25" :
-              activeCategory === "Autre" ? "bg-amber-600/25" : "bg-violet-600/15"
+              activeCategory === "Texte" ? "bg-blue-600" :
+              activeCategory === "Image" ? "bg-purple-600" :
+              activeCategory === "Code" ? "bg-cyan-400" :
+              activeCategory === "Vidéo" ? "bg-amber-600" :
+              activeCategory === "Audio" ? "bg-pink-600" :
+              activeCategory === "Autre" ? "bg-red-500" : "bg-violet-600/15"
             }`}></div>
             <img 
               src={iaBrain} 
-              alt="IA brain_2.png" 
+              alt="IA brain" 
               className="relative z-10 max-h-64 md:max-h-72 w-auto object-contain select-none drop-shadow-[0_0_35px_rgba(139,92,246,0.2)]"
             />
           </div>
 
-          {/* HÉMISPHÈRE DROIT (Orange/Rouge) : Choix Vidéo, Audio, Autre */}
-          <div className="md:col-span-3 w-full flex flex-row md:flex-col justify-center gap-3 z-10">
+          {/* HÉMISPHÈRE DROIT */}
+          <div className="md:col-span-3 w-full h-full flex flex-row md:grid md:grid-rows-3 items-center gap-4 z-10">
             <button 
               onClick={() => handleBrainHubClick("Vidéo")}
-              className={`flex-1 md:w-full flex items-center gap-3 p-3 rounded-xl border text-left transition-all duration-200 ${activeCategory === "Vidéo" ? "bg-pink-950/80 border-pink-500 text-white shadow-lg shadow-pink-500/20 scale-102" : "bg-slate-900/90 border-slate-800 text-slate-300 hover:border-slate-700 hover:bg-slate-800"}`}
+              className={`flex-1 md:w-full flex items-center gap-3 p-3 rounded-xl border text-left transition-all duration-200 ${activeCategory === "Vidéo" ? "bg-amber-950/80 border-amber-500 text-white shadow-lg shadow-amber-500/20 scale-102" : "bg-slate-900/90 border-slate-800 text-slate-300 hover:border-slate-700 hover:bg-slate-800"}`}
             >
-              <div className="w-8 h-8 rounded-lg bg-slate-950 flex items-center justify-center text-pink-400"><PlayCircle size={16} /></div>
+              <div className="w-8 h-8 rounded-lg bg-slate-950 flex items-center justify-center text-amber-400"><PlayCircle size={16} /></div>
               <span className="text-xs font-bold tracking-tight">Studio Vidéo</span>
             </button>
             <button 
               onClick={() => handleBrainHubClick("Audio")}
-              className={`flex-1 md:w-full flex items-center gap-3 p-3 rounded-xl border text-left transition-all duration-200 ${activeCategory === "Audio" ? "bg-orange-950/80 border-orange-500 text-white shadow-lg shadow-orange-500/20 scale-102" : "bg-slate-900/90 border-slate-800 text-slate-300 hover:border-slate-700 hover:bg-slate-800"}`}
+              className={`flex-1 md:w-full flex items-center gap-3 p-3 rounded-xl border text-left transition-all duration-200 ${activeCategory === "Audio" ? "bg-pink-950/80 border-pink-500 text-white shadow-lg shadow-pink-500/20 scale-102" : "bg-slate-900/90 border-slate-800 text-slate-300 hover:border-slate-700 hover:bg-slate-800"}`}
             >
-              <div className="w-8 h-8 rounded-lg bg-slate-950 flex items-center justify-center text-orange-400"><Headphones size={16} /></div>
+              <div className="w-8 h-8 rounded-lg bg-slate-950 flex items-center justify-center text-pink-400"><Headphones size={16} /></div>
               <span className="text-xs font-bold tracking-tight">Musique & Son</span>
             </button>
             <button 
               onClick={() => handleBrainHubClick("Autre")}
-              className={`flex-1 md:w-full flex items-center gap-3 p-3 rounded-xl border text-left transition-all duration-200 ${activeCategory === "Autre" ? "bg-amber-950/80 border-amber-500 text-white shadow-lg shadow-amber-500/20 scale-102" : "bg-slate-900/90 border-slate-800 text-slate-300 hover:border-slate-700 hover:bg-slate-800"}`}
+              className={`flex-1 md:w-full flex items-center gap-3 p-3 rounded-xl border text-left transition-all duration-200 ${activeCategory === "Autre" ? "bg-red-950/80 border-red-500 text-white shadow-lg shadow-red-500/20 scale-102" : "bg-slate-900/90 border-slate-800 text-slate-300 hover:border-slate-700 hover:bg-slate-800"}`}
             >
-              <div className="w-8 h-8 rounded-lg bg-slate-950 flex items-center justify-center text-amber-400"><Layers size={16} /></div>
+              <div className="w-8 h-8 rounded-lg bg-slate-950 flex items-center justify-center text-red-400"><Layers size={16} /></div>
               <span className="text-xs font-bold tracking-tight">Productivité</span>
             </button>
           </div>
@@ -536,7 +533,7 @@ export default function IA() {
       </section>
       {/* ===================================================================================== */}
 
-      {/* Guide senior interactif rétractable */}
+      {/* Guide interactif */}
       {showHelp && (
         <section className="bg-gradient-to-r from-violet-600 to-indigo-600 text-white p-5 rounded-2xl shadow-xs relative overflow-hidden transition-all">
           <div className="flex items-start justify-between gap-4 relative z-10">
@@ -559,11 +556,10 @@ export default function IA() {
         </section>
       )}
 
-      {/* Filtres par onglets classiques et recherche locale */}
+      {/* Filtres par onglets et recherche locale */}
       <div ref={viewSectionRef} className="space-y-4 bg-white p-4 rounded-2xl border border-slate-100 shadow-2xs scroll-mt-6">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           
-          {/* Onglets horizontaux */}
           <div className="flex flex-wrap gap-1.5 p-1 bg-slate-100 rounded-xl w-fit">
             {categories.map((cat) => {
               const IconComponent = cat.icon
@@ -588,7 +584,6 @@ export default function IA() {
             })}
           </div>
 
-          {/* Barre de saisie */}
           <div className="relative w-full md:w-80">
             <Search size={16} className="absolute left-3.5 top-3 text-slate-400" />
             <input 
@@ -612,7 +607,6 @@ export default function IA() {
             >
               <div className="p-5 space-y-4 flex-1">
                 
-                {/* En-tête de carte */}
                 <div className="flex items-center justify-between">
                   <div className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center border border-slate-100 overflow-hidden p-1.5 shadow-2xs">
                     {tool.logo.startsWith("http") ? (
@@ -630,7 +624,6 @@ export default function IA() {
                   </span>
                 </div>
 
-                {/* Contenu textuel */}
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
                     <h3 className="text-base font-bold text-slate-900 tracking-tight">
@@ -649,7 +642,6 @@ export default function IA() {
                   {tool.description}
                 </p>
 
-                {/* Exemples de prompts interactifs */}
                 <div className="pt-3 border-t border-slate-100 space-y-2">
                   <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1">
                     <Sparkles size={10} className="text-violet-400" />
@@ -687,7 +679,6 @@ export default function IA() {
                 </div>
               </div>
 
-              {/* Action externe */}
               <div className="px-5 py-3 bg-slate-50/50 border-t border-slate-100">
                 <a
                   href={tool.website}
@@ -703,7 +694,6 @@ export default function IA() {
           ))}
         </div>
       ) : (
-        /* État vide */
         <div className="text-center py-16 bg-white border border-slate-200 rounded-2xl shadow-2xs">
           <div className="text-4xl mb-3">🔍</div>
           <h3 className="text-base font-bold text-slate-800">Aucun outil trouvé</h3>

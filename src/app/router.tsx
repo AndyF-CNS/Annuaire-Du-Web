@@ -7,6 +7,7 @@ import IA from "../pages/IA";
 import Favoris from "../pages/Favoris";
 import TechFacile from "../pages/TechFacile";
 import Ateliers from "../pages/Ateliers";
+import Blog from "../pages/Blog";
 
 export const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
       {
         path:"ateliers",
         element: <Ateliers />
+      },
+      { 
+        path:"blog",
+        element: <Blog />
       }
     ],
   },

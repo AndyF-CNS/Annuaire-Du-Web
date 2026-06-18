@@ -1,6 +1,7 @@
 import { sitesData } from "./siteData"
 import { fichesData } from "./fiches"
 import { aiTools } from "./aiTools"
+import { blogArticles } from "./blogData"
 
 export const resources = [
   ...sitesData.map((site) => ({
@@ -29,4 +30,7 @@ export const resources = [
     category: tool.category,
     url: tool.website,
   })),
+
+  ...blogArticles
+  
 ]
