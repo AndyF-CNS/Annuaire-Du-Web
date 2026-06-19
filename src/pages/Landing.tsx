@@ -115,15 +115,15 @@ export default function Landing() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-normal text-white max-w-3xl leading-[1.15] text-center mx-auto mb-8">
             L'informatique devient <br />
             <span className="italic font-sans font-bold bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
-              simple et évidente.
+              simple et évident.
             </span>
           </h1>
           
-          <p className="text-base md:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed text-center mb-10">
+          <p className="text-base md:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed text-center mb-10 pt-3">
             Un annuaire de vos sites favoris, des explications claires sans jargon technique et des ateliers pas-à-pas pour naviguer sur internet en toute sérénité.
           </p>
 
-          <div className="flex justify-center w-full">
+          <div className="flex justify-center w-full pt-3">
             <Link 
               to="/annuaire" 
               className="px-10 py-4 bg-violet-600 text-white font-bold text-base rounded-full hover:bg-violet-500 transition-all flex items-center justify-center gap-3 shadow-lg shadow-violet-600/20"
@@ -192,6 +192,7 @@ export default function Landing() {
             </div>
           </div>
         </div>
+
       </section>
 
       {/* --- SECTION CARROUSEL DES TÉMOIGNAGES (TEMOIGNAGES) --- */}
