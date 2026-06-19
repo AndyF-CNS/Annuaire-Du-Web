@@ -68,7 +68,7 @@ export default function TechFacile() {
             Prêt à commencer un cours interactif ?
           </h2>
           <p className="text-violet-100 text-sm md:text-base leading-relaxed">
-            Cliquez sur le bouton ci-contre pour ouvrir notre plateforme complète. Des centaines d'exercices guidés illustrés pas à pas vous attendent pour devenir autonome en quelques minutes par jour !
+            Cliquez sur le bouton ci-contre pour ouvrir notre plateforme complète. Des exercices guidés illustrés pas à pas vous attendent pour devenir autonome en quelques minutes par jour !
           </p>
         </div>
         

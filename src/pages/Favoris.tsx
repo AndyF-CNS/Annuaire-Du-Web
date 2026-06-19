@@ -34,7 +34,7 @@ export default function Favoris() {
           <div className="space-y-0.5">
             <h2 className="text-sm font-bold text-slate-900">Un tableau de bord à votre image</h2>
             <p className="text-slate-600 text-xs">
-              Pour ajouter un site ici, cliquez simplement sur l'étoile grise présente sur n'importe quelle fiche de l'annuaire.
+              Pour ajouter un site ici, cliquez simplement sur l'étoile grise présente sur n'importe quelle site de l'annuaire.
             </p>
           </div>
         </div>
