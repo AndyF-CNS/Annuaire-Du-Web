@@ -8,6 +8,8 @@ import Favoris from "../pages/Favoris";
 import TechFacile from "../pages/TechFacile";
 import Ateliers from "../pages/Ateliers";
 import Blog from "../pages/Blog";
+import TFHBrandIdentity from "../pages/techfacilebrand";
+import Home from "../pages/Home";
 
 export const router = createBrowserRouter([
   // 1. LA LANDING PAGE (Plein écran, racine du site)
@@ -21,13 +23,15 @@ export const router = createBrowserRouter([
     element: <AppLayout />, // Notez qu'il n'y a plus de 'path' ici !
     children: [
       // Tous les liens de votre Sidebar arrivent ici
+      { path: "/home", element: <Home /> },
       { path: "/annuaire", element: <Annuaire /> },
       { path: "/fiches", element: <Fiches /> },
       { path: "/ia", element: <IA /> },
       { path: "/favoris", element: <Favoris /> },
       { path: "/tech-facile", element: <TechFacile /> },
       { path: "/ateliers", element: <Ateliers /> },
-      { path: "/blog", element: <Blog /> }
+      { path: "/blog", element: <Blog /> },
+      { path: "/tfh-brand-identity", element: <TFHBrandIdentity /> }
     ],
   },
 ]);
