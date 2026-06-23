@@ -4,9 +4,10 @@ import { Star, Brain, ShieldCheck, Smartphone, Wifi, Layers, RefreshCw } from "l
 
 // --- TYPES OFFICIELS DE VOTRE ARCHITECTURE ---
 export interface ContentBlock {
-  type: 'paragraph' | 'heading' | 'tip' | 'warning' | 'quote';
+  type: 'paragraph' | 'heading' | 'tip' | 'warning' | 'quote' |'list';
   text: string;
   title?: string; // Optionnel, pour le titre des alertes/astuces
+  items?: string[];
 }
 
 export interface Article {
@@ -40,7 +41,7 @@ export const blogArticles: Article[] = [
     colorClass: "bg-orange-600",
     isFeatured: true,
     toc: ["L'enfer des 50 onglets ouverts", "Pourquoi notre cerveau sature", "La méthode des 3 fenêtres", "Conclusion"],
-    tags: ["#Astuces", "#Organisation", "#Navigateur", "#Productivité"],
+    tags: ["Astuces", "Organisation", "Navigateur", "Productivité"],
     contentBlocks: [
       { type: 'paragraph', text: "Ouvrir des dizaines d'onglets simultanément sur votre navigateur internet donne l'illusion d'être efficace. En réalité, cela ralentit votre ordinateur et fragmente votre attention de manière agressive." },
       { type: 'heading', text: "Le coût caché de l'encombrement numérique" },
@@ -63,7 +64,7 @@ export const blogArticles: Article[] = [
     icon: Brain,
     colorClass: "bg-blue-600",
     toc: ["La métaphore du bureau", "Pourquoi votre PC ralentit", "Le bon diagnostic"],
-    tags: ["#Matériel", "#Technologie", "#RAM"],
+    tags: ["Matériel", "Technologie", "RAM"],
     contentBlocks: [
       { type: 'paragraph', text: "La mémoire vive, souvent appelée RAM, est l'un des composants les plus essentiels de votre machine, mais aussi l'un des plus mal compris." },
       { type: 'heading', text: "La métaphore du bureau en bois" },
@@ -83,7 +84,7 @@ export const blogArticles: Article[] = [
     icon: ShieldCheck,
     colorClass: "bg-emerald-700",
     toc: ["L'évolution du phishing", "Le levier de l'urgence", "Le réflexe de vérification"],
-    tags: ["#Sécurité", "#Arnaques", "#Phishing"],
+    tags: ["Sécurité", "Arnaques", "Phishing"],
     contentBlocks: [
       { type: 'paragraph', text: "En 2026, les cybercriminels n'utilisent plus de faux e-mails truffés de fautes d'orthographe grossières. Ils copient à la perfection les designs de vos administrations." },
       { type: 'heading', text: "Le piège de l'urgence émotionnelle" },
@@ -102,7 +103,7 @@ export const blogArticles: Article[] = [
     icon: Brain,
     colorClass: "bg-cyan-600",
     toc: ["La fin des invites complexes", "Les modèles locaux", "L'accessibilité"],
-    tags: ["#IA", "#Futur", "#Innovation"],
+    tags: ["IA", "Futur", "Innovation"],
     contentBlocks: [
       { type: 'paragraph', text: "Oubliez les 'prompts' d'ingénieurs à rallonge. L'année 2026 marque l'avènement des IA contextuelles, capables de comprendre vos intentions de manière totalement naturelle." },
       { type: 'heading', text: "L'IA devient une extension de vos applications" },
@@ -112,21 +113,31 @@ export const blogArticles: Article[] = [
   },
   {
     id: "grid-1",
-    title: "Gérer et trier ses demandes d'aide numérique avec sérénité",
-    summary: "Une méthodologie claire et structurée pour organiser l'assistance informatique interne sans se laisser déborder par l'urgence.",
+    title: "Crise de la ram ? Que se passe t-il vraiment?",
+    summary: "Hausse des prix de la RAM, délais rallongés et pénurie, tout comprendre de la crise de la RAM",
     date: "24 Avril 2026",
-    readTime: "4 min",
+    readTime: "10 min",
     category: "Guides Pratiques",
     badge: { text: "Grand public", type: "pub" },
     icon: Layers,
     colorClass: "bg-blue-600",
-    toc: ["Le syndrome de l'interruption", "Centraliser pour mieux souffler", "Créer des fiches d'autonomie"],
-    tags: ["#Organisation", "#Entraide", "#Pédagogie"],
+    toc: ["Que se passe-t-il ? La chronologie des événements", "Le « Grand Coupable » : L'Intelligence Artificielle (IA)", "Créer des fiches d'autonomie"],
+    tags: ["Pénurie", "RAM", "Pédagogie", "Conseils"],
     contentBlocks: [
-      { type: 'paragraph', text: "Être le référent technique d'une équipe ou d'une famille peut vite devenir un cauchemar si les sollicitations se font par SMS, e-mail et de vive voix en continu." },
-      { type: 'heading', text: "Mettre en place un point d'entrée unique" },
-      { type: 'paragraph', text: "Pour éviter l'épuisement face aux sollicitations, forcez la centralisation. Qu'il s'agisse d'un simple tableau partagé ou d'un canal dédié, regroupez les demandes pour les traiter par vagues plutôt qu'à la volée." },
-      { type: 'tip', title: "Astuce Gain de Temps", text: "Lorsque vous dépannez quelqu'un pour la troisième fois sur le même problème, documentez la solution en 3 captures d'écran. Cette fiche d'autonomie réduira vos futures interruptions de 80%." }
+      { type: 'paragraph', text: "Vous entendez partout sans peut-être réellement comprendre les enjeux. La mémoire RAM s’arrache à prix d’or en ce moment et certains acteurs délaissent même le marché grand public. Une situation qui concerne en premier lieu les PC, mais pourrait par capillarité atteindre tous les produits tech. On vous explique tout ce que vous devez savoir à propos de la crise de la RAM." },
+      // Section 1 --- //
+      { type: 'heading', text: "Que se passe-t-il ? La chronologie des événements"},
+      { type: 'paragraph', text: "Vous avez peut-être remarqué une hausse des prix sur le matériel informatique. Ce n'est pas une impression : certains composants, comme la mémoire vive (RAM) ou les disques de stockage (SSD), ont vu leur prix s'envoler de façon spectaculaire ces derniers mois."},
+      { type: 'paragraph', text: "Exemple concret : Une barrette de mémoire vive recommandée dans les guides d'achat a vu son prix passer de 119 euros en octobre 2025 à 449 euros en avril 2026, soit une augmentation de plus de 277 %. Un disque SSD a également connu une hausse de près de 96 % sur la même période."},
+      // Section 2 --- //
+      { type: 'heading', text: "Le « Grand Coupable » : L'Intelligence Artificielle (IA)"},
+      { type: 'paragraph', text: "Pour comprendre cette situation, il faut regarder du côté de l'Intelligence Artificielle. Pour fonctionner, les systèmes d'IA ont besoin d'une mémoire spéciale, très performante, appelée HBM (High Bandwidth Memory)."},
+      { type: 'paragraph', text: "Voici quelque exemples concret :La matière première rare : Les géants de l'IA vont jusqu'à acheter directement les galettes de silicium (la base de fabrication des puces) pour sécuriser leurs stocks, créant une rareté pour les autres usages."},
+      {type: 'list', text:"", items:[
+        'Une demande gigantesque : Les entreprises qui développent l\'IA aspirent toutes les capacités de production des usines.',
+        'La priorité aux professionnels : Les fabricants concentrent leurs efforts sur cette mémoire pour l\'IA, délaissant un peu la production de mémoires classiques pour nos ordinateurs personnels.',
+      ]},
+      { type: 'tip', title: "Astuce Économique", text: "Tournez-vous vers des marques grand public. Il est possible de choisir des marques comme Corsair, G.Skill ou Kingston. Si ces marques ne produisent pas elles-mêmes leurs composants, elles se destinent au grand public." }
     ]
   },
   {
@@ -140,7 +151,7 @@ export const blogArticles: Article[] = [
     icon: Smartphone,
     colorClass: "bg-orange-600",
     toc: ["Le freeze complet", "Le grand secret informatique", "Le check-up matériel"],
-    tags: ["#Dépannage", "#Autonomie", "#Tablette"],
+    tags: ["Dépannage", "Autonomie", "Tablette"],
     contentBlocks: [
       { type: 'paragraph', text: "Un écran figé ou une application qui refuse de se fermer ne signifie pas que votre appareil est cassé. L'informatique subit parfois des conflits de processus invisibles." },
       { type: 'heading', text: "La règle universelle du redémarrage électrique" },
@@ -159,7 +170,7 @@ export const blogArticles: Article[] = [
     icon: RefreshCw,
     colorClass: "bg-cyan-600",
     toc: ["Pourquoi cette mise à jour ?", "L'interactivité au cœur du projet", "Comment y accéder"],
-    tags: ["#MiseÀJour", "#Hub", "#Outils"],
+    tags: ["MiseÀJour", "Hub", "Outils"],
     contentBlocks: [
       { type: 'paragraph', text: "Nous sommes fiers de vous présenter le déploiement majeur de notre version 2.0. Notre plateforme évolue pour offrir des parcours de formation encore plus proches de vos réalités de terrain." },
       { type: 'heading', text: "Des exercices immersifs sans risque" },
@@ -178,7 +189,7 @@ export const blogArticles: Article[] = [
     icon: Wifi,
     colorClass: "bg-blue-600",
     toc: ["Le plafond des e-mails", "Les outils de transfert direct", "Gagner du temps"],
-    tags: ["#Partage", "#Cloud", "#Internet"],
+    tags: ["Partage", "Cloud", "Internet"],
     contentBlocks: [
       { type: 'paragraph', text: "Envoyer un album photo de vacances ou une vidéo de famille par e-mail se solde presque toujours par un message d'erreur indiquant que le fichier est trop lourd." },
       { type: 'heading', text: "Utiliser des services de transfert éphémères" },
@@ -197,7 +208,7 @@ export const blogArticles: Article[] = [
     icon: Brain,
     colorClass: "bg-cyan-600",
     toc: ["La fin du gigantisme", "La spécialisation des modèles", "Avantages écologiques et économiques"],
-    tags: ["#IA", "#Technologie", "#Optimisation"],
+    tags: ["IA", "Technologie", "Optimisation"],
     contentBlocks: [
       { type: 'paragraph', text: "La course à la taille des modèles d'intelligence artificielle ralentit. L'industrie se tourne massivement vers des modèles plus petits, spécialisés et hautement optimisés." },
       { type: 'heading', text: "Pourquoi la taille ne fait pas tout" },
@@ -216,7 +227,7 @@ export const blogArticles: Article[] = [
     icon: Layers,
     colorClass: "bg-emerald-700",
     toc: ["Une participation record", "Les thèmes abordés", "Perspectives"],
-    tags: ["#Communauté", "#Atelier", "#Rencontre"],
+    tags: ["Communauté", "Atelier", "Rencontre"],
     contentBlocks: [
       { type: 'paragraph', text: "Notre dernier atelier d'inclusion et d'accompagnement numérique a réuni plus de cinquante participants impatients de briser la glace avec les outils modernes." },
       { type: 'heading', text: "L'autonomie au cœur des ateliers" },

@@ -288,12 +288,7 @@ export default function Landing() {
 
           {/* 📝 CONTENU DROITE */}
           <div className="space-y-32 sm:space-y-44 flex-1 w-full">
-            {STEPS.map((step, index) => {
-              const Icon = step.icon;
-              const isEven = index % 2 !== 0;
-              
-              return null; 
-            })}
+            
 
             {/* 1. ANNUAIRE */}
             <div id="step-1" className={`grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 items-center transition-all duration-1000 ease-out transform ${revealed["step-1"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>

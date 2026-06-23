@@ -1,7 +1,8 @@
-import React, { useState } from "react"
-import { ArrowUpRight, BookOpen, ArrowLeft, Clock, ChevronRight, Lightbulb, AlertTriangle } from "lucide-react"
+import { useState } from "react"
+import { ArrowUpRight, BookOpen, ArrowLeft, ChevronRight, Lightbulb, AlertTriangle } from "lucide-react"
 // Importation de votre structure de données nettoyée
 import { blogArticles } from "../data/blogData" 
+
 
 // --- DESIGN TOKENS (TFH-THEME) ---
 const C = {
@@ -84,7 +85,7 @@ export default function BlogSection() {
                 Le Journal de TechFacile<span style={{ color: C.cyan }}>Hub</span>
               </h2>
               <p className="text-sm mt-2 max-w-xl leading-relaxed" style={{ color: C.t3 }}>
-                L'actualité tech décryptée, simplifiée et pensée pour accompagner vos équipes au quotidien.
+                L'actualité tech décryptée, simplifiée et pensée pour accompagner votre quotidien.
               </p>
             </div>
 
@@ -310,10 +311,10 @@ export default function BlogSection() {
             {/* METADONNÉES / AUTEUR */}
             <div className="flex items-center gap-3 pb-8 mb-8 border-b" style={{ borderColor: C.surface }}>
               <div className="w-10 h-10 rounded-full font-bold text-xs flex items-center justify-center border" style={{ backgroundColor: C.surface, borderColor: C.border, color: C.blueXD }}>
-                TFH
+                AF
               </div>
               <div>
-                <span className="block text-sm font-bold" style={{ color: C.blueXD }}>La Rédaction TechFacileHub</span>
+                <span className="block text-sm font-bold" style={{ color: C.blueXD }}>Andy Fiey</span>
                 <span className="block text-xs" style={{ color: C.t4 }}>Publié le {selectedArticle.date}</span>
               </div>
             </div>
@@ -384,6 +385,7 @@ export default function BlogSection() {
                           “ {block.text} ”
                         </blockquote>
                       )
+                      case "list":
                     default:
                       return null
                   }

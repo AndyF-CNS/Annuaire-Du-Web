@@ -1,14 +1,18 @@
 import { FileText, Eye, Layers, ArrowDownToLine } from "lucide-react"
+import { useState } from "react";
 
 export default function Fiches() {
+  const [selectedPdf, setSelectedPdf] = useState<string | null>(null);
+
   const fichesPratiques = [
     {
       title: "Mémo : Le Clic-Gauche et Clic-Droit",
-      category: "Débuter",
+      category: "Débutant",
       pages: "1 page PDF",
       description: "Une fiche visuelle toute simple avec des couleurs pour ne plus jamais confondre l'utilité des deux boutons de votre souris.",
       difficulty: "Très facile",
-      color: "bg-blue-50 text-blue-600 border-blue-100"
+      color: "bg-blue-50 text-blue-600 border-blue-100",
+      lien:""
     },
     {
       title: "Fiche : Créer et retenir un bon Mot de Passe",

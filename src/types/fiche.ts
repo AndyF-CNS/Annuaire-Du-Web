@@ -4,17 +4,20 @@ export type Niveau =
   | "avance"
 
 export type Animateur =
-  | "andy"
-  | "emilie"
+  | "Andy"
+  | "Emilie"
 
 export interface Fiche {
-  id: number
-  titre: string
+  id?: number
+  title: string
+  pages:string
   description: string
-  categorie: string
-  niveau: Niveau
-  animateur: Animateur
-  duree: number
-  icon: string
+  category: string
+  niveau?: Niveau
+  difficulty:string
+  animateur?: Animateur
+  duree?: number
+  icon?: string
   lien: string
+  color:string
 }
