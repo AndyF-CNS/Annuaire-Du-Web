@@ -4,12 +4,12 @@ export default function StatsGrid() {
   const stats = [
     {
       title: "Sites",
-      value: 125,
+      value: 39,
       icon: Globe,
     },
     {
       title: "Fiches",
-      value: 42,
+      value: 4,
       icon: BookOpen,
     },
     {
@@ -19,12 +19,12 @@ export default function StatsGrid() {
     },
     {
       title: "Favoris",
-      value: 15,
+      value: 3,
       icon: Star,
     },
     {
       title:"Blog",
-      value: 1,
+      value: 10,
       icon: Newspaper,
     }
   ]

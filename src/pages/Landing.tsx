@@ -122,7 +122,7 @@ export default function Landing() {
 
     return () => {
       lenis.destroy()
-      try { document.head.removeChild(link); } catch (_) {}
+      try { document.head.removeChild(link); } catch (_) { }
     }
   }, [])
 
@@ -192,19 +192,19 @@ export default function Landing() {
 
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white max-w-3xl leading-[1.2] md:leading-[1.15] text-center mx-auto mb-6 sm:mb-8 tracking-tight" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
             L'informatique devient <br />
-            <span className="italic font-sans font-bold bg-linear-to-r from-[#1A4FD6] to-[#00B4C8] bg-clip-text text-transparent">
+            <span className="italic font-sans font-bold bg-linear-to-r from-[#1a9ed6] to-[#04ff68] bg-clip-text text-transparent">
               simple et évident.
             </span>
           </h1>
 
-          <p className="text-sm sm:text-base md:text-lg text-[#8FA3BB] max-w-2xl mx-auto leading-relaxed text-center mb-8 sm:mb-10 px-2">
+          <p className="pt-5 text-sm sm:text-base md:text-lg text-[#8FA3BB] max-w-2xl mx-auto leading-relaxed text-center mb-8 sm:mb-10 px-2">
             Un annuaire de vos sites favoris, des explications claires sans jargon technique et des ateliers pas-à-pas pour naviguer sur internet en toute sérénité.
           </p>
 
-          <div className="flex justify-center w-full px-4 sm:px-0">
+          <div className="pt-5 flex justify-center w-full px-4 sm:px-0">
             <Link
               to="/annuaire"
-              className="w-full sm:w-auto px-6 sm:px-10 py-3.5 sm:py-4 bg-[#FF6B35] text-white font-bold text-sm sm:text-base rounded-lg hover:bg-[#FF8F62] transition-all flex items-center justify-center gap-3 shadow-[0_4px_20px_rgba(255,107,53,0.25)]"
+              className="pt- w-full sm:w-auto px-6 sm:px-10 py-3.5 sm:py-4 bg-[#FF6B35] text-white font-bold text-sm sm:text-base rounded-lg hover:bg-[#FF8F62] transition-all flex items-center justify-center gap-3 shadow-[0_4px_20px_rgba(255,107,53,0.25)]"
             >
               Accéder à mon espace <ArrowRight size={18} />
             </Link>
@@ -217,11 +217,11 @@ export default function Landing() {
           </div>
         </div>
         
-         <div className="text-center mb-10 sm:mb-12 flex flex-col items-center justify-center px-4 sm:px-6">
+        <div className="text-center mb-10 sm:mb-12 flex flex-col items-center justify-center px-4 sm:px-6">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white mt-2 pt-4" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Voici Quelques chiffres</h2>
         </div>
         <div className="flex grid-cols-3 sm:grid-cols-3 gap-6 sm:gap-12 text-center px-4 sm:px-6">
-          <div className="space-y-2"> 
+          <div className="space-y-2">
             <div className="text-3xl sm:text-4xl font-extrabold text-white" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>73%</div>
             <div className="text-sm sm:text-base text-[#8FA3BB]">des plus de 60 ans sont en ligne — mais peu se sentent en sécurité</div>
             <div className="text-3xl sm:text-4xl font-extrabold text-white" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>1,5M</div>
@@ -288,7 +288,7 @@ export default function Landing() {
 
           {/* 📝 CONTENU DROITE */}
           <div className="space-y-32 sm:space-y-44 flex-1 w-full">
-            
+
 
             {/* 1. ANNUAIRE */}
             <div id="step-1" className={`grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 items-center transition-all duration-1000 ease-out transform ${revealed["step-1"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
