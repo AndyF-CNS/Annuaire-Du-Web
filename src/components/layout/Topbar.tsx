@@ -2,7 +2,8 @@ import { Search } from "lucide-react"
 
 export default function Topbar() {
   return (
-    <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-100 px-8 py-3">
+    // Ajout de w-full pour étirer proprement la Topbar sur tout son conteneur parent
+    <header className="sticky top-0 z-40 w-full bg-white/80 backdrop-blur border-b border-slate-100 px-8 py-3">
       <div className="flex justify-between items-center">
         <div className="
           flex

@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+html,
+body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  background: var(--bg);
+}
+
 :root {
   /* Couleurs */
   --text: #6b6375;
@@ -30,6 +39,17 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  text-align: start;
+  overflow-x: hidden; /* Empêche le marquee ou le hero de faire éclater le root */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -112,4 +132,25 @@ code {
 
 .animate-marquee {
   animation: marquee 40s linear infinite;
+}
+
+html.lenis, 
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  scroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }

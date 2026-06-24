@@ -1,5 +1,5 @@
 import { Calendar, Users, MapPin, ArrowRight } from "lucide-react";
-import { TFH } from "../theme/tfh-themes";
+import { TFH } from "../themes/tfh-themes";
 
 export default function Ateliers() {
   const ateliers2026 = [

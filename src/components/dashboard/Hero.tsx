@@ -1,15 +1,11 @@
+import { TFH } from "../../themes/tfh-themes"
+
 export default function Hero() {
   return (
     <section
-      className="
-      rounded-2xl
-      p-6 md:p-8
-      text-white
-      bg-gradient-to-r
-      from-violet-600
-      to-cyan-500
-      "
-    >
+       style={{
+          background: TFH.c.gradientCyan, color: TFH.c.white, padding: TFH.spacing.md, borderRadius: TFH.radius.lg, marginBottom: TFH.spacing.xl, display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "start", boxShadow: TFH.shadow.sm,}}>
+      
       <h1 className="text-3xl font-bold tracking-tight">
         Tech Facile Hub
       </h1>

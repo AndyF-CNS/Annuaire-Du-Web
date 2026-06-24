@@ -14,10 +14,11 @@ import {
   HelpCircle,
   Copy,
   Check,
-  Layers
+  Layers,
+  Smile // 1. Ajout de l'avatar humain bienveillant
 } from "lucide-react"
 
-// Import de votre fichier PNG d'identité
+// Import du fichier PNG d'identité
 import iaBrain from "../assets/ia-brain.png";
 
 export default function IA() {
@@ -31,6 +32,7 @@ export default function IA() {
   const viewSectionRef = useRef<HTMLDivElement>(null)
 
   // --- DONNÉES DES OUTILS IA ---
+  // 2. Ajout de la propriété "requiresAccount: true" sur les outils concernés
   const aiTools = [
     // Texte
     {
@@ -42,7 +44,8 @@ export default function IA() {
       website: "https://chat.mistral.ai/",
       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Mistral_AI_logo_%282025%E2%80%93%29.svg/960px-Mistral_AI_logo_%282025%E2%80%93%29.svg.png",
       badge: "Recherche d'actualités",
-      examples: ["Suivre l'actualité d'un sujet", "Trouver l'origine d'une expression"]
+      examples: ["Suivre l'actualité d'un sujet", "Trouver l'origine d'une expression"],
+      requiresAccount: true
     },
     {
       id: "claude",
@@ -53,7 +56,8 @@ export default function IA() {
       website: "https://claude.ai",
       logo: "https://images.seeklogo.com/logo-png/55/2/claude-logo-png_seeklogo-554534.png",
       badge: "Très chaleureux",
-      examples: ["Corriger les fautes d'un texte", "Résumer un long article"]
+      examples: ["Corriger les fautes d'un texte", "Résumer un long article"],
+      requiresAccount: true
     },
     {
       id: "chatgpt",
@@ -64,7 +68,8 @@ export default function IA() {
       website: "https://chatgpt.com",
       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/ChatGPT-Logo.svg/1280px-ChatGPT-Logo.svg.png",
       badge: "Le plus populaire",
-      examples: ["Rédiger une lettre administrative", "Trouver des idées de recettes"]
+      examples: ["Rédiger une lettre administrative", "Trouver des idées de recettes"],
+      requiresAccount: true
     },
     {
       id: "gemini",
@@ -73,9 +78,10 @@ export default function IA() {
       purpose: "Idéal pour : Raisonnement avancé",
       description: "Un modèle multilingue et multimodal pour des réponses précises et contextuelles.",
       website: "https://gemini.google.com",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Google_Gemini_logo.svg/1200px-Google_Gemini_logo.svg.png",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Google_Gemini_icon_2025.svg/1280px-Google_Gemini_icon_2025.svg.png",
       badge: "Multimodal",
-      examples: ["Analyser un document PDF", "Traduire un texte technique"]
+      examples: ["Analyser un document PDF", "Traduire un texte technique"],
+      requiresAccount: true
     },
     // Image
     {
@@ -85,9 +91,10 @@ export default function IA() {
       purpose: "Idéal pour : Créer des images artistiques",
       description: "Générez des images de haute qualité avec des styles variés, idéal pour les créatifs.",
       website: "https://leonardo.ai",
-      logo: "https://leonardo.ai/favicon.ico",
+      logo: "https://cdn.prod.website-files.com/66d825d3650f70aa06553ed3/68d2a097dcedc6bd656a0769_logo-leonardo.png",
       badge: "Art génératif",
-      examples: ["Créer un personnage de jeu vidéo", "Générer un paysage futuriste"]
+      examples: ["Créer un personnage de jeu vidéo", "Générer un paysage futuriste"],
+      requiresAccount: true
     },
     {
       id: "ideogram",
@@ -98,7 +105,8 @@ export default function IA() {
       website: "https://ideogram.ai",
       logo: "https://ideogram.ai/favicon.ico",
       badge: "Texte + Image",
-      examples: ["Créer une affiche avec du texte", "Générer un logo avec un slogan"]
+      examples: ["Créer une affiche avec du texte", "Générer un logo avec un slogan"],
+      requiresAccount: true
     },
     {
       id: "bing",
@@ -109,7 +117,8 @@ export default function IA() {
       website: "https://www.bing.com/images/create",
       logo: "https://www.bing.com/favicon.ico",
       badge: "Intégré à Bing",
-      examples: ["Créer une illustration pour un article", "Imaginer un animal fantastique"]
+      examples: ["Créer une illustration pour un article", "Imaginer un animal fantastique"],
+      requiresAccount: true
     },
     {
       id: "firefly",
@@ -118,9 +127,10 @@ export default function IA() {
       purpose: "Idéal pour : Design professionnel",
       description: "Outil d'Adobe pour générer des images et des effets visuels de qualité professionnelle.",
       website: "https://firefly.adobe.com",
-      logo: "https://firefly.adobe.com/favicon.ico",
+      logo: "https://www.adobe.com/cc-shared/assets/img/firefly.svg",
       badge: "Adobe",
-      examples: ["Retoucher une photo", "Créer un fond pour une bannière"]
+      examples: ["Retoucher une photo", "Créer un fond pour une bannière"],
+      requiresAccount: true
     },
     // Vidéo
     {
@@ -130,9 +140,10 @@ export default function IA() {
       purpose: "Idéal pour : Montage vidéo simple",
       description: "Créez des vidéos professionnelles à partir de vos photos et vidéos en quelques clics.",
       website: "https://animoto.com",
-      logo: "https://animoto.com/favicon.ico",
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0Pkln3QpSv8wdwKRBQdjlVP_-Rk-sW70fYg&s",
       badge: "Montage automatique",
-      examples: ["Créer une vidéo de vacances", "Faire un diaporama musical"]
+      examples: ["Créer une vidéo de vacances", "Faire un diaporama musical"],
+      requiresAccount: true
     },
     {
       id: "pika",
@@ -143,7 +154,8 @@ export default function IA() {
       website: "https://pika.art",
       logo: "https://pika.art/favicon.ico",
       badge: "Vidéo IA",
-      examples: ["Créer une scène animée", "Générer une vidéo à partir d'un story-board"]
+      examples: ["Créer une scène animée", "Générer une vidéo à partir d'un story-board"],
+      requiresAccount: true
     },
     {
       id: "pippit",
@@ -152,9 +164,10 @@ export default function IA() {
       purpose: "Idéal pour : Édition vidéo intelligente",
       description: "Éditez vos vidéos avec des outils d'IA pour ajouter des effets, des sous-titres, etc.",
       website: "https://pippit.ai",
-      logo: "https://pippit.ai/favicon.ico",
+      logo: "https://cdn.prod.website-files.com/66d825d3650f70aa06553ed3/68cc274e2a4ab88da09078c7_Pippit%20AI.jpg",
       badge: "Édition intelligente",
-      examples: ["Ajouter des sous-titres automatiques", "Appliquer un filtre artistique"]
+      examples: ["Ajouter des sous-titres automatiques", "Appliquer un filtre artistique"],
+      requiresAccount: false
     },
     // Musique
     {
@@ -166,7 +179,8 @@ export default function IA() {
       website: "https://riffusion.com",
       logo: "https://riffusion.com/favicon.ico",
       badge: "Création musicale",
-      examples: ["Créer une mélodie pour une chanson", "Générer un rythme de batterie"]
+      examples: ["Créer une mélodie pour une chanson", "Générer un rythme de batterie"],
+      requiresAccount: false
     },
     {
       id: "udio",
@@ -177,7 +191,8 @@ export default function IA() {
       website: "https://udio.com",
       logo: "https://udio.com/favicon.ico",
       badge: "Studio IA",
-      examples: ["Composer une chanson pop", "Créer une bande-son pour une vidéo"]
+      examples: ["Composer une chanson pop", "Créer une bande-son pour une vidéo"],
+      requiresAccount: true
     },
     {
       id: "boomy",
@@ -188,7 +203,8 @@ export default function IA() {
       website: "https://boomy.com",
       logo: "https://boomy.com/favicon.ico",
       badge: "Accessible à tous",
-      examples: ["Créer un morceau pour un podcast", "Générer une ambiance sonore"]
+      examples: ["Créer un morceau pour un podcast", "Générer une ambiance sonore"],
+      requiresAccount: true
     },
     {
       id: "suno",
@@ -199,7 +215,8 @@ export default function IA() {
       website: "https://suno.com",
       logo: "https://avenuedelia.com/media/img/suno-icon.max-300x300.png",
       badge: "Magie musicale",
-      examples: ["Créer un jazz d'ambiance pour lire", "Une chanson d'anniversaire amusante"]
+      examples: ["Créer un jazz d'ambiance pour lire", "Une chanson d'anniversaire amusante"],
+      requiresAccount: true
     },
     // Code
     {
@@ -209,9 +226,10 @@ export default function IA() {
       purpose: "Idéal pour : Apprendre à coder",
       description: "Un environnement de développement en ligne avec assistance IA pour apprendre et pratiquer la programmation.",
       website: "https://replit.com",
-      logo: "https://replit.com/favicon.ico",
+      logo: "https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/dark/replit-color.png",
       badge: "Apprentissage",
-      examples: ["Créer un jeu en Python", "Apprendre les bases de JavaScript"]
+      examples: ["Créer un jeu en Python", "Apprendre les bases de JavaScript"],
+      requiresAccount: true
     },
     {
       id: "github",
@@ -222,7 +240,8 @@ export default function IA() {
       website: "https://github.com/features/copilot",
       logo: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
       badge: "Intégration IDE",
-      examples: ["Générer une fonction complexe", "Corriger des bugs dans votre code"]
+      examples: ["Générer une fonction complexe", "Corriger des bugs dans votre code"],
+      requiresAccount: true
     },
     {
       id: "windsurf",
@@ -233,7 +252,7 @@ export default function IA() {
       website: "https://windsurf.com",
       logo: "💻",
       badge: "Automatisation",
-      examples: ["Automatiser des tests unitaires", "Générer des scripts de déploiement"]
+      requiresAccount: true
     },
     // Autre
     {
@@ -245,7 +264,8 @@ export default function IA() {
       website: "https://perplexity.ai",
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLbKqia9h-6FPu4yhtOmldu5R33c1cC53hHA&s",
       badge: "Recherche nette",
-      examples: ["Suivre l'actualité d'un sujet", "Trouver l'origine d'une expression"]
+      examples: ["Suivre l'actualité d'un sujet", "Trouver l'origine d'une expression"],
+      requiresAccount: false // Optionnel sans compte
     },
     {
       id: "napkin",
@@ -256,7 +276,8 @@ export default function IA() {
       website: "https://napkin.ai",
       logo: "https://napkin.ai/favicon.ico",
       badge: "Productivité",
-      examples: ["Créer une mind map pour un projet", "Organiser une brainstorming"]
+      examples: ["Créer une mind map pour un projet", "Organiser une brainstorming"],
+      requiresAccount: true
     },
     {
       id: "notion",
@@ -265,9 +286,10 @@ export default function IA() {
       purpose: "Idéal pour : Gestion de projets et notes",
       description: "Un assistant IA intégré à Notion pour vous help à rédiger, organiser et gérer vos projets.",
       website: "https://notion.ai",
-      logo: "https://notion.so/favicon.ico",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Notion-logo.svg/960px-Notion-logo.svg.png",
       badge: "Tout-en-un",
-      examples: ["Rédiger un compte-rendu de réunion", "Créer un plan de projet détaillé"]
+      examples: ["Rédiger un compte-rendu de réunion", "Créer un plan de projet détaillé"],
+      requiresAccount: true
     },
     {
       id: "notebooklm",
@@ -276,9 +298,10 @@ export default function IA() {
       purpose: "Idéal pour : Résumer vos documents",
       description: "Import vos notes et documents, et l'IA vous aide à les comprendre, les résumer et en extraire les informations clés.",
       website: "https://notebooklm.google.com",
-      logo: "https://notebooklm.google.com/favicon.ico",
+      logo: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/notebooklm-icon.png",
       badge: "Gestion de connaissances",
-      examples: ["Résumer un livre", "Extraire les points clés d'un rapport"]
+      examples: ["Résumer un livre", "Extraire les points clés d'un rapport"],
+      requiresAccount: true
     }
   ]
 
@@ -338,7 +361,6 @@ export default function IA() {
 
       {/* ================= ZONE CENTRALE : CARTOGRAPHIE DES SAVOIRS ================= */}
       <section className="bg-slate-950 rounded-3xl p-6 md:p-12 shadow-xl border border-slate-800 relative overflow-hidden text-center">
-        {/* Voile de grille technique en arrière-plan */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20"></div>
         
         <div className="relative z-10 mb-6 max-w-md mx-auto space-y-1">
@@ -353,8 +375,6 @@ export default function IA() {
 
         {/* Hub Technologique */}
         <div className="relative max-w-4xl mx-auto flex flex-col md:grid md:grid-cols-12 items-center gap-8 md:h-[420px] py-4">
-          
-          {/* ⚡ CALQUE SVG INTERACTIF ET ALIGNÉ */}
           <svg 
             className="absolute inset-0 w-full h-full pointer-events-none hidden md:block z-0" 
             viewBox="0 0 900 420" 
@@ -387,8 +407,6 @@ export default function IA() {
               </linearGradient>
             </defs>
 
-            {/* --- CÔTÉ GAUCHE --- */}
-            {/* Ligne 1 : Texte */}
             <path 
               d="M 225 70 H 280 L 340 165 H 375" 
               fill="none" 
@@ -400,7 +418,6 @@ export default function IA() {
             <circle cx="225" cy="70" r="3.5" fill="#3b82f6" opacity={activeCategory === "Texte" || activeCategory === "Tous" ? "1" : "0.4"}/>
             <circle cx="375" cy="165" r="2.5" fill="#8b5cf6" opacity={activeCategory === "Texte" || activeCategory === "Tous" ? "1" : "0.4"}/>
 
-            {/* Ligne 2 : Image (Milieu Gauche Stylisée) */}
             <path 
               d="M 225 210 H 270 L 320 195 H 365" 
               fill="none" 
@@ -412,7 +429,6 @@ export default function IA() {
             <circle cx="225" cy="210" r="3.5" fill="#a855f7" opacity={activeCategory === "Image" || activeCategory === "Tous" ? "1" : "0.4"}/>
             <circle cx="365" cy="195" r="2.5" fill="#c084fc" opacity={activeCategory === "Image" || activeCategory === "Tous" ? "1" : "0.4"}/>
 
-            {/* Ligne 3 : Code */}
             <path 
               d="M 225 350 H 280 L 340 255 H 375" 
               fill="none" 
@@ -424,8 +440,6 @@ export default function IA() {
             <circle cx="225" cy="350" r="3.5" fill="#06b6d4" opacity={activeCategory === "Code" || activeCategory === "Tous" ? "1" : "0.4"}/>
             <circle cx="375" cy="255" r="2.5" fill="#6366f1" opacity={activeCategory === "Code" || activeCategory === "Tous" ? "1" : "0.4"}/>
 
-            {/* --- CÔTÉ DROIT --- */}
-            {/* Ligne 1 : Vidéo */}
             <path 
               d="M 675 70 H 620 L 560 165 H 525" 
               fill="none" 
@@ -437,7 +451,6 @@ export default function IA() {
             <circle cx="675" cy="70" r="3.5" fill="#ffb900" opacity={activeCategory === "Vidéo" || activeCategory === "Tous" ? "1" : "0.4"}/>
             <circle cx="525" cy="165" r="2.5" fill="#f59e0b" opacity={activeCategory === "Vidéo" || activeCategory === "Tous" ? "1" : "0.4"}/>
 
-            {/* Ligne 2 : Audio (Milieu Droit Stylisée) */}
             <path 
               d="M 675 210 H 630 L 580 195 H 535" 
               fill="none" 
@@ -449,7 +462,6 @@ export default function IA() {
             <circle cx="675" cy="210" r="3.5" fill="#f43f5e" opacity={activeCategory === "Audio" || activeCategory === "Tous" ? "1" : "0.4"}/>
             <circle cx="535" cy="195" r="2.5" fill="#ec4899" opacity={activeCategory === "Audio" || activeCategory === "Tous" ? "1" : "0.4"}/>
 
-            {/* Ligne 3 : Autre */}
             <path 
               d="M 675 350 H 620 L 560 255 H 525" 
               fill="none" 
@@ -528,10 +540,8 @@ export default function IA() {
               <span className="text-xs font-bold tracking-tight">Productivité</span>
             </button>
           </div>
-
         </div>
       </section>
-      {/* ===================================================================================== */}
 
       {/* Guide interactif */}
       {showHelp && (
@@ -559,7 +569,6 @@ export default function IA() {
       {/* Filtres par onglets et recherche locale */}
       <div ref={viewSectionRef} className="space-y-4 bg-white p-4 rounded-2xl border border-slate-100 shadow-2xs scroll-mt-6">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-          
           <div className="flex flex-wrap gap-1.5 p-1 bg-slate-100 rounded-xl w-fit">
             {categories.map((cat) => {
               const IconComponent = cat.icon
@@ -606,7 +615,6 @@ export default function IA() {
               className="bg-white border border-slate-200/80 rounded-2xl shadow-2xs flex flex-col justify-between overflow-hidden transition duration-200 hover:shadow-md hover:border-slate-300"
             >
               <div className="p-5 space-y-4 flex-1">
-                
                 <div className="flex items-center justify-between">
                   <div className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center border border-slate-100 overflow-hidden p-1.5 shadow-2xs">
                     {tool.logo.startsWith("http") ? (
@@ -642,44 +650,83 @@ export default function IA() {
                   {tool.description}
                 </p>
 
-                <div className="pt-3 border-t border-slate-100 space-y-2">
-                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1">
-                    <Sparkles size={10} className="text-violet-400" />
-                    Cliquez sur une idée pour la copier :
-                  </p>
-                  <ul className="space-y-1.5">
-                    {tool.examples.map((example, i) => {
-                      const isCopied = copiedText === example
-                      return (
-                        <li key={i}>
-                          <button
-                            onClick={() => handleCopyExample(example)}
-                            className={`
-                              w-full text-left flex items-start gap-2 text-xs p-2 rounded-lg transition group border border-transparent
-                              ${isCopied 
-                                ? "bg-green-50 text-green-700 border-green-200" 
-                                : "text-slate-700 hover:bg-slate-50 hover:border-slate-100 italic"
-                              }
-                            `}
-                          >
-                            {isCopied ? (
-                              <Check size={13} className="text-green-600 mt-0.5 shrink-0" />
-                            ) : (
-                              <CheckCircle2 size={13} className="text-violet-500 mt-0.5 shrink-0 transition-transform group-hover:scale-110" />
-                            )}
-                            <span className="flex-1">"{example}"</span>
-                            <span className="opacity-0 group-hover:opacity-100 ml-1 text-slate-400 self-center transition-opacity">
-                              <Copy size={11} />
-                            </span>
-                          </button>
-                        </li>
-                      )
-                    })}
-                  </ul>
-                </div>
+                {tool.examples && tool.examples.length > 0 && (
+                  <div className="pt-3 border-t border-slate-100 space-y-2">
+                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1">
+                      <Sparkles size={10} className="text-violet-400" />
+                      Cliquez sur une idée pour la copier :
+                    </p>
+                    <ul className="space-y-1.5">
+                      {tool.examples.map((example, i) => {
+                        const isCopied = copiedText === example
+                        return (
+                          <li key={i}>
+                            <button
+                              onClick={() => handleCopyExample(example)}
+                              className={`
+                                w-full text-left flex items-start gap-2 text-xs p-2 rounded-lg transition group border border-transparent
+                                ${isCopied 
+                                  ? "bg-green-50 text-green-700 border-green-200" 
+                                  : "text-slate-700 hover:bg-slate-50 hover:border-slate-100 italic"
+                                }
+                              `}
+                            >
+                              {isCopied ? (
+                                <Check size={13} className="text-green-600 mt-0.5 shrink-0" />
+                              ) : (
+                                <CheckCircle2 size={13} className="text-violet-500 mt-0.5 shrink-0 transition-transform group-hover:scale-110" />
+                              )}
+                              <span className="flex-1">"{example}"</span>
+                              <span className="opacity-0 group-hover:opacity-100 ml-1 text-slate-400 self-center transition-opacity">
+                                <Copy size={11} />
+                              </span>
+                            </button>
+                          </li>
+                        )
+                      })}
+                    </ul>
+                  </div>
+                )}
               </div>
 
-              <div className="px-5 py-3 bg-slate-50/50 border-t border-slate-100">
+              {/* ⬇️ ZONE PIED DE CARTE MODIFIÉE ⬇️ */}
+              <div className="px-5 py-3 bg-slate-50/50 border-t border-slate-100 flex flex-col gap-2.5">
+                
+                {/* 3. AVATAR HUMAIN INFORMATIF (Se déclenche au Hover PC / au Tap Mobile) */}
+                {tool.requiresAccount && (
+                  <div className="relative group/avatar flex items-center gap-2 px-3 py-1.5 bg-amber-50/80 border border-amber-200/70 rounded-xl cursor-help select-none w-fit transition-colors hover:bg-amber-100/70">
+                    
+                    {/* BULLE DE DIALOGUE SOURIANTE */}
+                    <div className="
+                      absolute bottom-full left-2 mb-2 w-56 p-3
+                      bg-slate-900 text-white text-[11px] rounded-xl shadow-lg border border-slate-800
+                      leading-relaxed font-normal
+                      
+                      /* Flèche de la bulle vers le bas */
+                      after:content-[''] after:absolute after:top-full after:left-4 
+                      after:border-4 after:border-transparent after:border-top-slate-900
+                      
+                      /* Animation d'apparition fluide */
+                      opacity-0 translate-y-1 scale-95 pointer-events-none
+                      group-hover/avatar:opacity-100 group-hover/avatar:translate-y-0 group-hover/avatar:scale-100
+                      transition-all duration-200 ease-out z-20
+                    ">
+                      <span className="font-bold text-amber-400 block mb-0.5">Note de TechFacile :</span>
+                      Pour utiliser cet outil, le site web va vous demander de créer un compte gratuit chez eux.
+                    </div>
+
+                    {/* Le visuel de l'avatar humain (icône Smile) */}
+                    <div className="w-5 h-5 rounded-full bg-amber-500 text-white flex items-center justify-center shrink-0 shadow-2xs">
+                      <Smile size={13} strokeWidth={2.5} />
+                    </div>
+                    
+                    <span className="text-[11px] font-bold text-amber-800 tracking-tight">
+                      Création de compte requise
+                    </span>
+                  </div>
+                )}
+
+                {/* BOUTON D'ACTION DÉJÀ EXISTANT */}
                 <a
                   href={tool.website}
                   target="_blank"
@@ -690,6 +737,8 @@ export default function IA() {
                   <ArrowUpRight size={14} className="text-slate-400 group-hover:text-violet-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
               </div>
+              {/* ⬆️ FIN DE LA ZONE PIED DE CARTE ⬆️ */}
+
             </div>
           ))}
         </div>

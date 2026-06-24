@@ -14,8 +14,8 @@ export default function ClassificationSection() {
     search,
     setSearch,
 
-    categorie,
-    setCategorie,
+    category,
+    setCategory,
 
     niveau,
     setNiveau,
@@ -68,8 +68,8 @@ export default function ClassificationSection() {
       />
 
       <FicheFilters
-        categorie={categorie}
-        setCategorie={setCategorie}
+        categorie={category}
+        setCategorie={setCategory}
 
         niveau={niveau}
         setNiveau={setNiveau}

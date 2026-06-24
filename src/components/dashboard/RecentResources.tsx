@@ -32,7 +32,7 @@ export default function RecentResources() {
        pb-2
        "
       >
-       {fiche.titre}
+       {fiche.title}
       </div>
      )
     )}

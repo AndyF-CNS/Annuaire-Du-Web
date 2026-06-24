@@ -32,13 +32,13 @@ export default function FicheCard({
           text-sm
         "
         >
-          {fiche.categorie}
+          {fiche.category}
         </span>
 
       </div>
 
       <h3 className="font-bold text-xl mt-4">
-        {fiche.titre}
+        {fiche.title}
       </h3>
 
       <p className="text-slate-600 mt-3">

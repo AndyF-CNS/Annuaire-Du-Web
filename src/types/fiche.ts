@@ -8,7 +8,7 @@ export type Animateur =
   | "Emilie"
 
 export interface Fiche {
-  id?: number
+  id?: string
   title: string
   pages:string
   description: string

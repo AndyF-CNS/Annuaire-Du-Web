@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { FileText, Eye, Layers, ArrowDownToLine, ArrowLeft, ChevronRight, Printer, Info } from "lucide-react"
+import { Eye, Layers, ArrowDownToLine, ArrowLeft, ChevronRight, Printer, Info } from "lucide-react"
 
 // --- DESIGN TOKENS HARMONISÉS ---
 const C = {

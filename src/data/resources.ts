@@ -17,9 +17,9 @@ export const resources = [
   ...fichesData.map((fiche) => ({
     id: fiche.id,
     type: "fiche",
-    title: fiche.titre,
+    title: fiche.title,
     description: fiche.description,
-    category: fiche.categorie,
+    category: fiche.category,
   })),
 
   ...aiTools.map((tool) => ({

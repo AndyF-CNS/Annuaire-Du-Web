@@ -216,7 +216,7 @@ export default function Landing() {
             <video src={LandingVideo} autoPlay loop muted playsInline className="w-full h-full object-cover rounded-lg sm:rounded-xl" />
           </div>
         </div>
-        
+
         <div className="text-center mb-10 sm:mb-12 flex flex-col items-center justify-center px-4 sm:px-6">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white mt-2 pt-4" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Voici Quelques chiffres</h2>
         </div>

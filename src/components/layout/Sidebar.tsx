@@ -1,7 +1,6 @@
 import { LayoutDashboard, Globe, BookOpen, Sparkles, Star, MoreHorizontal, X, Wrench, Newspaper, NotebookPen } from "lucide-react";
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { TFH } from "../../theme/tfh-themes";
 
 // 🔹 Composant HubSVG (adapté aux couleurs TFH)
 const HubSVG = ({ size = 24, primary = "#FFFFFF", accent = "#00B4C8", node = "#FFFFFF", line = "#FFFFFF" }) => (
@@ -40,14 +39,13 @@ export default function Sidebar() {
   return (
     <>
       {/* 🖥️ VERSION DESKTOP (Tailwind gère le responsive) */}
-      <aside className="hidden md:flex fixed left-0 top-0 h-screen w-52 bg-[#08152B] p-6 flex-col gap-8 border-r border-[#00B4C8]/20">
+      <aside className="hidden md:flex fixed left-0 top-0 h-screen w-60 bg-[#08152B] p-6 flex-col gap-8 border-r border-[#00B4C8]/20">
         {/* Logo + Texte */}
         <div className="flex items-center gap-3">
           <HubSVG size={32} primary="#FFFFFF" accent="#00B4C8" node="#FFFFFF" line="#FFFFFF" />
-          <div className="font-['Plus_Jakarta_Sans'] text-xl font-bold tracking-tight">
-            <span className="text-white">TechFacile</span>
-            <span className="text-[#00B4C8]">Hub</span>
-          </div>
+          <div className="text-base sm:text-lg font-extrabold text-white tracking-tight shrink-0" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+              TechFacile<span className="text-[#00B4C8]">Hub</span>
+            </div>
         </div>
 
         {/* Navigation */}
